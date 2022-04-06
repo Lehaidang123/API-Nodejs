@@ -67,6 +67,13 @@ sanphamrouter.post("/addsanpham", (req, res) => {
         });
       });
 
+      sanphamrouter.delete('/deleteSanpham/:id', function (req, res, next) {
+        sanpham.findById(req.params.id, function(err, todo){
+          if(err) res.send(err);
+          res.json(todo);
+        });
+      });
+
     //   sanphamrouter.get('/getsp/:TenSP', function (req, res, next) {
     //     sanpham.findById(req.params.TenSP, function(err, todo){
     //       if(err) res.send(err);
