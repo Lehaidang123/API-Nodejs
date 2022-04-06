@@ -67,4 +67,26 @@ sanphamrouter.post("/addsanpham", (req, res) => {
         });
       });
 
-    module.exports = sanphamrouter;    
+    //   sanphamrouter.get('/getsp/:TenSP', function (req, res, next) {
+    //     sanpham.findById(req.params.TenSP, function(err, todo){
+    //       if(err) res.send(err);
+    //       res.json(todo);
+    //     });
+    //   });
+
+    //   sanphamrouter.get('/news/:page', (req, res, next) => {
+    //     let perPage = 1; // số lượng sản phẩm xuất hiện trên 1 page
+    //     let page = req.params.page || 1; 
+      
+    //     Product
+    //       .find() // find tất cả các data
+    //       .skip((perPage * page) - perPage) // Trong page đầu tiên sẽ bỏ qua giá trị là 0
+    //       .limit(perPage)
+    //       .exec((err, sanpham) => {
+    //         Product.countDocuments((err, count) => { // đếm để tính có bao nhiêu trang
+    //           if (err) return next(err);
+    //            res.send(sanpham) // Trả về dữ liệu các sản phẩm theo định dạng như JSON, XML,...
+    //         });
+    //       });
+    //   });
+     module.exports = sanphamrouter;    

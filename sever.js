@@ -3,6 +3,7 @@
     const bodyParser = require('body-parser');
     const cookieParser =require("cookie-parser");
     const app = express();
+    var cors = require('cors');
     app.use(bodyParser.json());
     app.use(cookieParser());
     const db =require("./config/key.js").mongoURI;
@@ -12,7 +13,7 @@
     .catch((err)=>console.log(err));
 
 
-
+ app.use(cors({origin: 'http://http://localhost:3003'}));
 
 app.use('/', require('./router/User'));
 app.use('/', require('./router/danhmuc'));
