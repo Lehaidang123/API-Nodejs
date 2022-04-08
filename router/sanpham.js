@@ -48,7 +48,7 @@ sanphamrouter.post("/addsanpham", (req, res) => {
     });
 
 
-    sanphamrouter.get('/deleteSanpham/(:id)', function(req, res, next) {
+    sanphamrouter.delete('/deleteSanpham/:id', function(req, res, next) {
         SanPham.findByIdAndRemove(req.params.id, (err, doc) => {
             if (!err) {
                 res.redirect('/users/list');
@@ -67,12 +67,12 @@ sanphamrouter.post("/addsanpham", (req, res) => {
         });
       });
 
-      sanphamrouter.delete('/deleteSanpham/:id', function (req, res, next) {
-        sanpham.findById(req.params.id, function(err, todo){
-          if(err) res.send(err);
-          res.json(todo);
-        });
-      });
+      // sanphamrouter.delete('/deleteSanpham/:id', function (req, res, next) {
+      //   sanpham.findById(req.params.id, function(err, todo){
+      //     if(err) res.send(err);
+      //     res.json(todo);
+      //   });
+      // });
 
     //   sanphamrouter.get('/getsp/:TenSP', function (req, res, next) {
     //     sanpham.findById(req.params.TenSP, function(err, todo){
