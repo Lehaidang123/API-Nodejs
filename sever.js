@@ -13,10 +13,11 @@
     .catch((err)=>console.log(err));
 
 
- app.use(cors({origin: 'http://http://localhost:3003'}));
+ app.use(cors({origin: 'http://localhost:3003'}));
 
 app.use('/', require('./router/User'));
 app.use('/', require('./router/danhmuc'));
 app.use('/', require('./router/sanpham'));
+app.use('/', require('./router/oder'));
     const PORT =process.env.PORT || 8088;
     app.listen(PORT,console.log('sever run with port ' + PORT));
