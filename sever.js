@@ -19,5 +19,6 @@ app.use('/', require('./router/User'));
 app.use('/', require('./router/danhmuc'));
 app.use('/', require('./router/sanpham'));
 app.use('/', require('./router/oder'));
+app.use('/', require('./router/comment'));
     const PORT =process.env.PORT || 8088;
     app.listen(PORT,console.log('sever run with port ' + PORT));

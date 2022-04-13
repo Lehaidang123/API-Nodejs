@@ -84,5 +84,7 @@ sanphamrouter.get('/news/:page', (req, res, next) => {
       });
   });
 
-
+  sanphamrouter.get('/seach', function(req, res, next) {
+    return res.json({ sanpham: sanpham.search(req.query) });
+  });
      module.exports = sanphamrouter;    
